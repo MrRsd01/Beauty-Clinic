@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کلینیک زیبایی نیلا | متخصص پوست و مو</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IRANSans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #F7F6F6;
+            color: #242019;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #46522F 0%, #90755D 70%, #C8C3BD 100%);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(70, 82, 47, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #F7F6F6;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #F7F6F6, #C8C3BD);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #46522F;
+            font-size: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        /* Centering the nav-menu when CTA is removed */
+        .nav-container .nav-menu {
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+
+        .nav-item a {
+            color: #F7F6F6;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-item a:hover {
+            background: rgba(247, 246, 246, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .nav-item a.active {
+            background: rgba(247, 246, 246, 0.3);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #46522F 0%, #90755D 50%, #C8C3BD 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(247,246,246,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(247,246,246,0.15) 0%, transparent 60%);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #F7F6F6;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-size: 20px;
+            color: rgba(247, 246, 246, 0.9);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #F7F6F6;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(247, 246, 246, 0.8);
+            margin-top: 5px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #F7F6F6, #C8C3BD);
+            color: #46522F;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-secondary {
+            border: 2px solid #F7F6F6;
+            color: #F7F6F6;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #F7F6F6;
+            color: #46522F;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .doctor-profile {
+            text-align: center;
+        }
+
+        .doctor-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #90755D, #46522F);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #F7F6F6;
+            box-shadow: 0 10px 30px rgba(70, 82, 47, 0.4);
+        }
+
+        .doctor-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #242019;
+            margin-bottom: 8px;
+        }
+
+        .doctor-title {
+            font-size: 16px;
+            color: #90755D;
+            margin-bottom: 20px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, #46522F, #90755D);
+            color: #F7F6F6;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .services-section {
+            padding: 100px 0;
+            background: #F7F6F6;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #242019;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #90755D;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(200,195,189,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(70, 82, 47, 0.2);
+            border-color: #C8C3BD;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #46522F, #90755D);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #F7F6F6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #242019;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card p {
+            color: #90755D;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #C8C3BD 0%, #F7F6F6 100%);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #242019;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #90755D;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: #242019;
+            font-weight: 500;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            background: linear-gradient(135deg, #46522F, #90755D);
+            color: #F7F6F6;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #90755D, #46522F);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F7F6F6;
+            font-size: 64px;
+            box-shadow: 0 15px 40px rgba(70, 82, 47, 0.3);
+        }
+
+        .contact-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #46522F 0%, #90755D 100%);
+            position: relative;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #F7F6F6;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            color: rgba(247, 246, 246, 0.9);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .contact-item {
+            background: rgba(247, 246, 246, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px 20px;
+            border: 1px solid rgba(247, 246, 246, 0.2);
+        }
+
+        .contact-item h4 {
+            color: #F7F6F6;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .contact-item p {
+            color: rgba(247, 246, 246, 0.8);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .footer {
+            background: #242019;
+            padding: 50px 0 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo .logo-icon {
+            background: linear-gradient(135deg, #46522F, #90755D);
+            color: #F7F6F6;
+        }
+
+        .footer-logo span {
+            color: #F7F6F6;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .footer p {
+            color: #C8C3BD;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #46522F, #90755D);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F7F6F6;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(70, 82, 47, 0.4);
+        }
+
+        .copyright {
+            border-top: 1px solid #46522F;
+            padding-top: 20px;
+            color: #90755D;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-animation.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">✨</div>
+                <span>کلینیک زیبایی نیلا</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="active">خانه</a></li>
+                <li class="nav-item"><a href="#services">خدمات</a></li>
+                <li class="nav-item"><a href="#about">درباره ما</a></li>
+                <li class="nav-item"><a href="#contact">تماس</a></li>
+            </ul>
+            </nav>
+    </header>
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>زیبایی و جذابیت طبیعی</h1>
+                <p class="subtitle">طبیعی‌ترین راه برای داشتن پوست سالم و زیبا را در کلینیک ما تجربه کنید</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">۱۲۰۰+</span>
+                        <span class="stat-label">مراجع راضی</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">۸</span>
+                        <span class="stat-label">سال تجربه</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">۴.۹</span>
+                        <span class="stat-label">امتیاز</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn-primary">مشاهده خدمات</a>
+                    <a href="#contact" class="btn-secondary">تماس با ما</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="doctor-profile">
+                        <div class="doctor-avatar">👩‍⚕️</div>
+                        <h3 class="doctor-name">دکتر نیلا محمدی</h3>
+                        <p class="doctor-title">متخصص پوست، مو و زیبایی</p>
+                        <div class="badges">
+                            <span class="badge">VOGUE</span>
+                            <span class="badge">FORBES</span>
+                            <span class="badge">مجوز رسمی</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="section-container">
+            <div class="section-header scroll-animation">
+                <h2 class="section-title">خدمات تخصصی ما</h2>
+                <p class="section-subtitle">مجموعه کاملی از خدمات زیبایی و مراقبت از پوست با بهترین کیفیت و تکنیک‌های روز دنیا</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card scroll-animation">
+                    <div class="service-icon">🧴</div>
+                    <h3>فیشیال تخصصی</h3>
+                    <p>پاکسازی عمیق، مرطوب‌سازی و تغذیه پوست با استفاده از محصولات طبیعی و دستگاه‌های پیشرفته</p>
+                </div>
+                <div class="service-card scroll-animation">
+                    <div class="service-icon">💆‍♀️</div>
+                    <h3>ماساژ درمانی</h3>
+                    <p>ماساژ صورت و بدن برای کاهش استرس، بهبود گردش خون و جوان‌سازی پوست</p>
+                </div>
+                <div class="service-card scroll-animation">
+                    <div class="service-icon">✨</div>
+                    <h3>جوان‌سازی پوست</h3>
+                    <p>درمان‌های نوین برای کاهش چین و چروک، لک‌های پوستی و بازگرداندن شادابی به پوست</p>
+                </div>
+                <div class="service-card scroll-animation">
+                    <div class="service-icon">🎯</div>
+                    <h3>مشاوره تخصصی</h3>
+                    <p>بررسی نوع پوست و ارائه برنامه مراقبتی شخصی‌سازی شده متناسب با نیازهای شما</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content scroll-animation">
+                <h2>چرا کلینیک زیبایی نیلا؟</h2>
+                <p>با ۸ سال تجربه در زمینه زیبایی و مراقبت از پوست، ما متعهد به ارائه بهترین خدمات با بالاترین کیفیت هستیم.</p>
+                <p>کلینیک ما مجهز به جدیدترین تجهیزات و دستگاه‌های روز دنیا بوده و تیم متخصص ما آماده ارائه خدمات حرفه‌ای به شما عزیزان است.</p>
+                <ul class="features-list">
+                    <li>استفاده از محصولات طبیعی و ارگانیک</li>
+                    <li>دستگاه‌های پیشرفته و استاندارد جهانی</li>
+                    <li>تیم متخصص و مجرب</li>
+                    <li>محیط بهداشتی و لوکس</li>
+                    <li>پیگیری بعد از درمان</li>
+                </ul>
+            </div>
+            <div class="about-image scroll-animation">
+                <div class="image-placeholder">🏥</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>آماده خدمت‌رسانی به شما هستیم</h2>
+            <p>برای رزرو نوبت و کسب اطلاعات بیشتر با ما در ارتباط باشید</p>
+            <div class="contact-info">
+                <div class="contact-item scroll-animation">
+                    <h4>📍 آدرس</h4>
+                    <p>تهران، خیابان ولیعصر، نرسیده به میدان ونک، پلاک ۱۲۳</p>
+                </div>
+                <div class="contact-item scroll-animation">
+                    <h4>📞 تلفن</h4>
+                    <p>۰۲۱-۱۲۳۴۵۶۷۸<br>۰۹۱۲۳۴۵۶۷۸۹</p>
+                </div>
+                <div class="contact-item scroll-animation">
+                    <h4>🕐 ساعات کاری</h4>
+                    <p>شنبه تا پنج‌شنبه: ۹:۰۰ تا ۱۸:۰۰<br>جمعه: تعطیل</p>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">✨</div>
+                <span>کلینیک زیبایی نیلا</span>
+            </div>
+            <p>ما در کلینیک زیبایی نیلا با ارائه خدمات حرفه‌ای و استفاده از بهترین محصولات، آمادگی خدمت‌رسانی به شما عزیزان را داریم.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">🐦</a>
+                <a href="#" class="social-link">💬</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; ۱۴۰۳ کلینیک زیبایی نیلا. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation item on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-item a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animation').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Button interactions
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Custom logic can be added here
+            });
+        });
+    </script>
+</body>
+</html>
