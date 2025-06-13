@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کلینیک زیبایی نیلا | متخصص پوست و مو</title>
+    <title>کلینیک زیبایی ایروانی| متخصص پوست و مو</title>
     <style>
         * {
             margin: 0;
@@ -65,7 +65,6 @@
             gap: 30px;
         }
         
-        /* Centering the nav-menu when CTA is removed */
         .nav-container .nav-menu {
             flex-grow: 1;
             justify-content: center;
@@ -139,29 +138,6 @@
             line-height: 1.5;
         }
 
-        .hero-stats {
-            display: flex;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: #F7F6F6;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: rgba(247, 246, 246, 0.8);
-            margin-top: 5px;
-        }
-
         .hero-buttons {
             display: flex;
             gap: 20px;
@@ -202,15 +178,18 @@
 
         .hero-image {
             position: relative;
+            display: flex;
+            gap: 20px;
         }
 
         .hero-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-radius: 30px;
-            padding: 40px;
+            padding: 30px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 50%;
         }
 
         .doctor-profile {
@@ -218,48 +197,30 @@
         }
 
         .doctor-avatar {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background: linear-gradient(135deg, #90755D, #46522F);
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
+            font-size: 40px;
             color: #F7F6F6;
             box-shadow: 0 10px 30px rgba(70, 82, 47, 0.4);
         }
 
         .doctor-name {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             color: #242019;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .doctor-title {
-            font-size: 16px;
+            font-size: 14px;
             color: #90755D;
-            margin-bottom: 20px;
-        }
-
-        .badges {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: linear-gradient(135deg, #46522F, #90755D);
-            color: #F7F6F6;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 15px;
         }
 
         .services-section {
@@ -388,34 +349,6 @@
             font-size: 16px;
             line-height: 1.8;
             margin-bottom: 20px;
-        }
-
-        .features-list {
-            list-style: none;
-            margin-top: 30px;
-        }
-
-        .features-list li {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            color: #242019;
-            font-weight: 500;
-        }
-
-        .features-list li::before {
-            content: '✓';
-            background: linear-gradient(135deg, #46522F, #90755D);
-            color: #F7F6F6;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 14px;
         }
 
         .about-image {
@@ -574,9 +507,12 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
-            .hero-content h1 {
-                font-size: 36px;
+            .hero-image {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-card {
+                width: 100%;
             }
 
             .about-container {
@@ -605,7 +541,7 @@
         <nav class="nav-container">
             <a href="#" class="logo">
                 <div class="logo-icon">✨</div>
-                <span>کلینیک زیبایی نیلا</span>
+                <span>  کلینیک زیبایی ایروانی</span>
             </a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="active">خانه</a></li>
@@ -618,22 +554,8 @@
     <section id="home" class="hero-section">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>زیبایی و جذابیت طبیعی</h1>
-                <p class="subtitle">طبیعی‌ترین راه برای داشتن پوست سالم و زیبا را در کلینیک ما تجربه کنید</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">۱۲۰۰+</span>
-                        <span class="stat-label">مراجع راضی</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">۸</span>
-                        <span class="stat-label">سال تجربه</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">۴.۹</span>
-                        <span class="stat-label">امتیاز</span>
-                    </div>
-                </div>
+                <h1>زیبایی از لحظه ای آغاز میشود که تصمیم میگیری خودت باشی</h1>
+                <p class="subtitle">زیبایی و جذابیت فیزیکی اولین تاثیر قدرتمند را در ذهن افراد ایجاد میکند. در واقع آنقدر قدرتمند که باعث میشود افراد از ظاهر فراتر روند و شروع به ایجاد فرضیاتی باورنکردنی در مورد موفقیت هوش و وضعیت شما کنند.</p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn-primary">مشاهده خدمات</a>
                     <a href="#contact" class="btn-secondary">تماس با ما</a>
@@ -643,13 +565,15 @@
                 <div class="hero-card">
                     <div class="doctor-profile">
                         <div class="doctor-avatar">👩‍⚕️</div>
-                        <h3 class="doctor-name">دکتر نیلا محمدی</h3>
-                        <p class="doctor-title">متخصص پوست، مو و زیبایی</p>
-                        <div class="badges">
-                            <span class="badge">VOGUE</span>
-                            <span class="badge">FORBES</span>
-                            <span class="badge">مجوز رسمی</span>
-                        </div>
+                        <h3 class="doctor-name">دکتر مریم ایروانی</h3>
+                        <p class="doctor-title">پزشک با بیش از ۲۵ سال سابقه</p>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="doctor-profile">
+                        <div class="doctor-avatar">💆‍♀️</div>
+                        <h3 class="doctor-name">اعظم ایروانی</h3>
+                        <p class="doctor-title">اسکین تراپیست با دو سال سابقه</p>
                     </div>
                 </div>
             </div>
@@ -659,29 +583,33 @@
     <section id="services" class="services-section">
         <div class="section-container">
             <div class="section-header scroll-animation">
-                <h2 class="section-title">خدمات تخصصی ما</h2>
-                <p class="section-subtitle">مجموعه کاملی از خدمات زیبایی و مراقبت از پوست با بهترین کیفیت و تکنیک‌های روز دنیا</p>
+                <h2 class="section-title">لیست خدمات</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card scroll-animation">
                     <div class="service-icon">🧴</div>
-                    <h3>فیشیال تخصصی</h3>
-                    <p>پاکسازی عمیق، مرطوب‌سازی و تغذیه پوست با استفاده از محصولات طبیعی و دستگاه‌های پیشرفته</p>
-                </div>
-                <div class="service-card scroll-animation">
-                    <div class="service-icon">💆‍♀️</div>
-                    <h3>ماساژ درمانی</h3>
-                    <p>ماساژ صورت و بدن برای کاهش استرس، بهبود گردش خون و جوان‌سازی پوست</p>
+                    <h3>پاکسازی و فیشال تخصصی پوست</h3>
+                    <p>فیشال یک روش غیر تهاجمی برای مراقبت از پوست است که به پاکسازی عمیق، و تغذیه پوست کمک می‌کند و به مرور زمان مشکلاتی مانند خشکی، جوش و لک را برطرف می‌کند.</p>
                 </div>
                 <div class="service-card scroll-animation">
                     <div class="service-icon">✨</div>
-                    <h3>جوان‌سازی پوست</h3>
-                    <p>درمان‌های نوین برای کاهش چین و چروک، لک‌های پوستی و بازگرداندن شادابی به پوست</p>
+                    <h3>جوانسازی پوست با دستگاه آر اف فرکشنال</h3>
+                    <p>با استفاده از امواج الکترومغناطیسی برای ایجاد گرما در بافت، به جوانسازی پوست کمک می‌کند. این روش غیرتهاجمی است و با تحریک کلاژن‌سازی، پوست را سفت و جوان می‌کند.</p>
                 </div>
                 <div class="service-card scroll-animation">
                     <div class="service-icon">🎯</div>
-                    <h3>مشاوره تخصصی</h3>
-                    <p>بررسی نوع پوست و ارائه برنامه مراقبتی شخصی‌سازی شده متناسب با نیازهای شما</p>
+                    <h3>لیزر موهای زائد</h3>
+                    <p>یک روش موثر برای کاهش موهای زائد است. انرژی نور لیزر به گرما تبدیل شده و با آسیب به فولیکول مو، رشد آن را متوقف یا کند می‌کند.</p>
+                </div>
+                <div class="service-card scroll-animation">
+                    <div class="service-icon">💉</div>
+                    <h3>تزریق ژل و بوتاکس</h3>
+                    <p>اطلاعات این بخش به زودی تکمیل خواهد شد.</p>
+                </div>
+                <div class="service-card scroll-animation">
+                    <div class="service-icon">🔥</div>
+                    <h3>رفع غبغب و چربی شکم با دستگاه آراف</h3>
+                    <p>امواج RF با آب کردن چربی و افزایش متابولیسم سلول‌های چربی، به کاهش بافت چربی در نواحی مختلف بدن مانند غبغب و شکم کمک می‌کند.</p>
                 </div>
             </div>
         </div>
@@ -690,16 +618,10 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-content scroll-animation">
-                <h2>چرا کلینیک زیبایی نیلا؟</h2>
-                <p>با ۸ سال تجربه در زمینه زیبایی و مراقبت از پوست، ما متعهد به ارائه بهترین خدمات با بالاترین کیفیت هستیم.</p>
-                <p>کلینیک ما مجهز به جدیدترین تجهیزات و دستگاه‌های روز دنیا بوده و تیم متخصص ما آماده ارائه خدمات حرفه‌ای به شما عزیزان است.</p>
-                <ul class="features-list">
-                    <li>استفاده از محصولات طبیعی و ارگانیک</li>
-                    <li>دستگاه‌های پیشرفته و استاندارد جهانی</li>
-                    <li>تیم متخصص و مجرب</li>
-                    <li>محیط بهداشتی و لوکس</li>
-                    <li>پیگیری بعد از درمان</li>
-                </ul>
+                <h2>درباره ما</h2>
+                <p>ما یک تیم حرفه‌ای متشکل از پزشک و اسکین تراپیست هستیم که با سال‌ها تجربه در زمینه پزشکی و پوست، بهترین خدمات را به شما ارائه می‌دهیم.</p>
+                <p><b>پزشک: دکتر مریم ایروانی</b> با بیش از ۲۵ سال سابقه فعالیت در حوزه پزشکی و تجربه کار در مراکز درمانی.</p>
+                <p><b>اسکین تراپیست: اعظم ایروانی</b> با دو سال سابقه فعالیت در حوزه پوست و دارای مدرک فنی و حرفه‌ای مراقبت از پوست.</p>
             </div>
             <div class="about-image scroll-animation">
                 <div class="image-placeholder">🏥</div>
@@ -714,11 +636,11 @@
             <div class="contact-info">
                 <div class="contact-item scroll-animation">
                     <h4>📍 آدرس</h4>
-                    <p>تهران، خیابان ولیعصر، نرسیده به میدان ونک، پلاک ۱۲۳</p>
+                    <p>مشهد - بلوار فکوری، تقاطع هاشمیه و فکوری - فکوری ۳۳</p>
                 </div>
                 <div class="contact-item scroll-animation">
                     <h4>📞 تلفن</h4>
-                    <p>۰۲۱-۱۲۳۴۵۶۷۸<br>۰۹۱۲۳۴۵۶۷۸۹</p>
+                    <p>۰۹۰۳۸۲۴۹۵۹۸<br>۰۹۱۵۱۵۷۱۵۴۳</p>
                 </div>
                 <div class="contact-item scroll-animation">
                     <h4>🕐 ساعات کاری</h4>
@@ -732,9 +654,9 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <div class="logo-icon">✨</div>
-                <span>کلینیک زیبایی نیلا</span>
+                <span>کلینیک زیبایی</span>
             </div>
-            <p>ما در کلینیک زیبایی نیلا با ارائه خدمات حرفه‌ای و استفاده از بهترین محصولات، آمادگی خدمت‌رسانی به شما عزیزان را داریم.</p>
+            <p>ما در کلینیک زیبایی با ارائه خدمات حرفه‌ای و استفاده از بهترین محصولات، آمادگی خدمت‌رسانی به شما عزیزان را داریم.</p>
             <div class="social-links">
                 <a href="#" class="social-link">📘</a>
                 <a href="#" class="social-link">📷</a>
@@ -742,13 +664,12 @@
                 <a href="#" class="social-link">💬</a>
             </div>
             <div class="copyright">
-                <p>&copy; ۱۴۰۳ کلینیک زیبایی نیلا. تمامی حقوق محفوظ است.</p>
+                <p>&copy; ۱۴۰۳ کلینیک زیبایی. تمامی حقوق محفوظ است.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -761,8 +682,6 @@
                 }
             });
         });
-
-        // Active navigation item on scroll
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('section[id]');
@@ -781,8 +700,6 @@
                 }
             });
         });
-
-        // Scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -800,12 +717,6 @@
             observer.observe(el);
         });
 
-        // Button interactions
-        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Custom logic can be added here
-            });
-        });
     </script>
 </body>
 </html>
